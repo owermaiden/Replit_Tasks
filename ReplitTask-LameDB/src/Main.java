@@ -8,10 +8,20 @@ class Main {
         int index = Integer.parseInt(id);
         switch(op) {
             case "add" :
-                db = db.concat("#"+ id + data);
-                return db;
+                if (index >= words.length) return db.concat("#"+ id + data);
+                String[] dummyArray = new String[words.length + 1];
+                dummyArray[index] = id + data;
+                int x = 0;
+                for (int i = 0; i < dummyArray.length; i++){
+                    if (i == index) {
+                        x = index;
+                        continue;
+                    }
+                    dummyArray[i] = (i + 1) + words[x++].substring(1);
+                }
+                return String.join("#", dummyArray);
             case "edit" :
-                words[index - 1] = id + data;
+                words[index] = id + data;
                 db = String.join("#", words);
                 return db;
             case "delete" :
