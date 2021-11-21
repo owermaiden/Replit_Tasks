@@ -17,10 +17,11 @@ public class Main {
         }
 
         String x = Stream.of(str.toCharArray())
+
                             // Do whatever you want...
                             // filter , sort, map etc...
                             .map(String::valueOf)
                             .collect(Collectors.joining());
-        return x;
+        return String.join("",set);
     }
 }

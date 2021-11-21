@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-AddToArray/ReplitTask-AddToArray.iml" filepath="$PROJECT_DIR$/ReplitTask-AddToArray/ReplitTask-AddToArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-CountLetters/ReplitTask-CountLetters.iml" filepath="$PROJECT_DIR$/ReplitTask-CountLetters/ReplitTask-CountLetters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-CoverMe/ReplitTask-CoverMe.iml" filepath="$PROJECT_DIR$/ReplitTask-CoverMe/ReplitTask-CoverMe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-IsAnagram/ReplitTask-IsAnagram.iml" filepath="$PROJECT_DIR$/ReplitTask-IsAnagram/ReplitTask-IsAnagram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-LameDB/ReplitTask-LameDB.iml" filepath="$PROJECT_DIR$/ReplitTask-LameDB/ReplitTask-LameDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReplitTask-MergeStrings/ReplitTask-MergeStrings.iml" filepath="$PROJECT_DIR$/ReplitTask-MergeStrings/ReplitTask-MergeStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-Palindrome/ReplitTask-Palindrome.iml" filepath="$PROJECT_DIR$/ReplitTask-Palindrome/ReplitTask-Palindrome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-PrintUnique/ReplitTask-PrintUnique.iml" filepath="$PROJECT_DIR$/ReplitTask-PrintUnique/ReplitTask-PrintUnique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-PrintUniqueWords/ReplitTask-PrintUniqueWords.iml" filepath="$PROJECT_DIR$/ReplitTask-PrintUniqueWords/ReplitTask-PrintUniqueWords.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReplitTask-RemoveDuplicate/ReplitTask-RemoveDuplicate.iml" filepath="$PROJECT_DIR$/ReplitTask-RemoveDuplicate/ReplitTask-RemoveDuplicate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-Reverse/ReplitTask-Reverse.iml" filepath="$PROJECT_DIR$/ReplitTask-Reverse/ReplitTask-Reverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTaskTimeConversion/ReplitTask-TimeConversion.iml" filepath="$PROJECT_DIR$/ReplitTaskTimeConversion/ReplitTask-TimeConversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-WordCount/ReplitTask-WordCount.iml" filepath="$PROJECT_DIR$/ReplitTask-WordCount/ReplitTask-WordCount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplitTask-isPos/ReplitTask-isPos.iml" filepath="$PROJECT_DIR$/ReplitTask-isPos/ReplitTask-isPos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Replit_Tasks.iml" filepath="$PROJECT_DIR$/Replit_Tasks.iml" />
     </modules>
   </component>
