@@ -140,22 +140,17 @@ public class Book {
      * Format includes author, title, id, pages of the Book object:
      * Book[author=Marufjon T, title=Selenium Cookbook, id=10, pages=300]
      */
+    @Override
     public String toString() {
-
-
-        return "";
-
+        return "Book[author= "+this.author+" , title="+ this.title+", id="+ this.id+", pages="+this.pages+"]";
     }
-
 
     /**
      * Getter methods for static unknownAuthors
      * @returns unknownAuthors value
      */
     public static int getUnknownAuthors(){
-
-
-        return 0;
+        return unknownAuthors;
     }
 
     /**
@@ -163,9 +158,7 @@ public class Book {
      * @returns pages value
      */
     public int getPages() {
-
-
-        return 0;
+        return this.pages;
     }
 
     /**
@@ -173,9 +166,7 @@ public class Book {
      * @param pages
      */
     public void setPages(int pages) {
-
-
-
+        this.pages = pages;
     }
 
     /**
@@ -198,17 +189,13 @@ public class Book {
      * public Getter method for private id
      */
     public int getId() {
-
-
-        return -1;
+        return this.id;
     }
     /**
      * public setter method for private id
      */
     public void setId(int id) {
-
-
-
+        this.id = id;
     }
 
 

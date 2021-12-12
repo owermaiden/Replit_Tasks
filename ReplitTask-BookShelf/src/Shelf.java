@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.Collectors;
+
 /**
  * Represents a book shelf.
  * Depends on Book class, so make sure Book class 100% done first
@@ -17,15 +19,14 @@ public class Shelf {
      * List<Book> theBooks will hold all book object in the shelf
      * in form of a List of Book objects
      */
-    private static List<Book> theBooks = new ArrayList<>();
+    private static final List<Book> theBooks = new ArrayList<>();
 
     /**
      * public static getter method for theBooks list
      * @return theBooks
      */
     public static List<Book> getTheBooks() {
-
-        return null;
+        return theBooks;
     }
 
     /**
@@ -35,8 +36,7 @@ public class Shelf {
      * @return true if list is empty or false if not
      */
     public static boolean isShelfEmpty(){
-
-        return false;
+        return theBooks.isEmpty();
     }
 
     /**
@@ -47,10 +47,7 @@ public class Shelf {
      * @return true or false
      */
     public static boolean isIDUnique(int id){
-
-
-        return false;
-
+        return theBooks.stream().mapToInt(Book::getId).noneMatch(t -> t==id);
     }
 
 
@@ -73,10 +70,9 @@ public class Shelf {
      *         theBooks.add(new Book(id,author,title,pages));
      */
     public static boolean addBook(int id, String author, String title, int pages ){
-
-
-
-        return false;
+        if (!isIDUnique(id) || pages <= 0) return false;
+        Book newBook = new Book(id,author,title,pages);
+        return Shelf.addBook(newBook);
     }
 
     /**
@@ -100,10 +96,9 @@ public class Shelf {
      *
      */
     public static boolean addBook(Book book ){
-
-
-
-        return false;
+        if (!isIDUnique(book.getId()) || book.getPages() <= 0 || book.getTitle().isEmpty()) return false;
+        theBooks.add(book);
+        return true;
     }
 
     /**
@@ -118,10 +113,9 @@ public class Shelf {
      *  Shelf.getTitleByID(100534534); => "book not found"
      */
     public static String getTitleByID(int id) {
-
-
-
-        return null;
+        Optional<Book> book = theBooks.stream().filter(bk -> bk.getId() == id).findAny();
+        if (book.isPresent()) return book.get().getTitle();
+        return "book not found";
     }
 
     /**
@@ -138,10 +132,8 @@ public class Shelf {
      *
      */
     public static Book findBookByPartialTitle(String title) {
-
-
-
-        return null;
+        Optional<Book> book = theBooks.stream().filter(bk -> bk.getTitle().contains(title)).findAny();
+        return book.orElse(null);
     }
 
     /**
@@ -153,9 +145,7 @@ public class Shelf {
      * @return List<Book> that belongs to that Author
      */
     public static List<Book> getAllBooksForAuthor(String author) {
-
-
-        return null;
+        return theBooks.stream().filter(bk -> bk.getAuthor().equalsIgnoreCase(author)).collect(Collectors.toList());
     }
 
     /**
@@ -165,8 +155,7 @@ public class Shelf {
      * if there is not match, no action needed
      */
     public static void removeBook(int id) {
-
-
+        theBooks.removeIf(book -> book.getId()==id);
     }
 
     /**
@@ -176,16 +165,14 @@ public class Shelf {
      * if there is not match, no action needed
      */
     public static void removeBook(String author) {
-
-
+        theBooks.removeIf(book -> book.getAuthor().equalsIgnoreCase(author));
     }
 
     /**
      * Clears the BookShelf of all books
      */
     public static void clearBookShelf() {
-
-
+        theBooks.clear();
     }
 
 
