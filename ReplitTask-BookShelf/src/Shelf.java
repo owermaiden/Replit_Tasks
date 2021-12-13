@@ -70,9 +70,9 @@ public class Shelf {
      *         theBooks.add(new Book(id,author,title,pages));
      */
     public static boolean addBook(int id, String author, String title, int pages ){
-        if (!isIDUnique(id) || pages <= 0) return false;
-        Book newBook = new Book(id,author,title,pages);
-        return Shelf.addBook(newBook);
+
+        if (!isIDUnique(id) || pages <= 0 || title.isEmpty()) return false;
+        return Shelf.addBook(new Book(id,author,title,pages));
     }
 
     /**

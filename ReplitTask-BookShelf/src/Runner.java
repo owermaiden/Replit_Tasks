@@ -7,6 +7,5 @@ public class Runner {
         Shelf.addBook(book2);
 
         System.out.println(Shelf.getTheBooks());
-
     }
 }

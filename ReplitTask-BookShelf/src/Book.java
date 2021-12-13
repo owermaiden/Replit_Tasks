@@ -52,7 +52,7 @@ public class Book {
      */
     public static Boolean isTitleWord(String word) {
         ArrayList<String> fullList = new ArrayList<>(List.of("a" , "an", "the","and", "but", "for", "nor", "or", "so", "yet","at", "by", "in", "into", "near", "of", "on", "to", "than", "via"));
-        return fullList.contains(word);
+        return !fullList.contains(word);
     }
 
     /**
