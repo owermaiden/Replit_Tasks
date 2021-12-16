@@ -25,7 +25,7 @@ public class Main {
     public static boolean nanuk2(ArrayList<String> list, int wayStones, int boast){
 
         int initialArrayLength = list.size();
-        list.removeIf(str -> str.equalsIgnoreCase("nanuk"));
+        list.removeIf(color -> color.equalsIgnoreCase("nanuk"));
         int nanuks = initialArrayLength - list.size();
 
         int points = 0;

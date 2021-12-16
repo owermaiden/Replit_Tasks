@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,6 +10,7 @@ public class TipCalculator {
         int people;
         String serviceQuality, numberOfPeople;
         boolean isSplit;
+
 
         HashMap<String, Double> quality = new HashMap<>();
         quality.put("poor", 1.05);

@@ -20,10 +20,12 @@ class Main {
                     dummyArray[i] = (i + 1) + words[x++].substring(1);
                 }
                 return String.join("#", dummyArray);
+
             case "edit" :
                 words[index] = id + data;
                 db = String.join("#", words);
                 return db;
+
             case "delete" :
                 String[] newArray = new String[words.length - 1];
                 int i = 0;
